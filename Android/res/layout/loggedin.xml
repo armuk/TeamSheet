@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:background="@drawable/transparentbackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_weight="0"
+        android:background="@drawable/blackbar" >
+
+        <TextView
+            android:id="@+id/staffNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_weight="1"
+            android:paddingLeft="30dip"
+            android:text="@string/staffName"
+            android:textColor="#FFF"
+            android:textColorLink="#FFF"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeloggedin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="right" >
+
+        <FrameLayout
+            android:id="@+id/preview"
+            android:layout_width="300dip"
+            android:layout_height="300dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="30dip" >
+
+            <SurfaceView
+                android:id="@+id/surfaceView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/savePhotoButton"
+            android:layout_width="320dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="false"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/preview"
+            android:background="@drawable/redbutton"
+            android:text="@string/savePhoto"
+            android:textColor="@drawable/redbuttonstatechange"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/noticeboardListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/savePhotoButton"
+            android:layout_alignLeft="@id/savePhotoButton" >
+
+        </ListView>
+
+    </RelativeLayout>
+
+</LinearLayout>

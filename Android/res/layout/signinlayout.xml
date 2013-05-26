@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparentbackground"
+    android:baselineAligned="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:layout_weight="0"
+        android:background="@drawable/blackbar" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="30dip"
+            android:text="@string/signin"
+            android:textColor="#FFF"
+            android:textColorLink="#FFF"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativesigninlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center" >
+
+        <EditText
+            android:id="@+id/emailAddressEditText"
+            android:layout_width="320dip"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="@string/emailAddressHint"
+            android:inputType="textEmailAddress" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="320dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailAddressEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_small"
+            android:ems="10"
+            android:hint="@string/passwordHint"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="320dip"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/passwordEditText"
+            android:layout_below="@id/passwordEditText"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/redbutton"
+            android:text="@string/loginText"
+            android:textColor="@drawable/redbuttonstatechange"
+            android:textSize="25dip"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="320dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/padding_small"
+            android:background="@drawable/redbutton"
+            android:paddingLeft="@dimen/padding_medium"
+            android:text="@string/register"
+            android:textColor="@drawable/redbuttonstatechange"
+            android:textSize="25dip"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>
