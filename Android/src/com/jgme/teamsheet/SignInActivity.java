@@ -100,7 +100,7 @@ public class SignInActivity extends Activity implements OnClickListener {
 			try {
 				object = new JSONObject();
 				HttpPost httppost = new HttpPost(
-						"http://heyjimmy.net/mobilesignin/index.php");
+						"https://heyjimmy.net/mobilesignin/index.php");
 				HttpClient httpclient = new DefaultHttpClient();
 				StringBody emailString = new StringBody(emailAddress);
 				StringBody passwordString = new StringBody(hashpass);
